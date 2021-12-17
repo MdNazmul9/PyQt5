@@ -27,8 +27,9 @@ class Window(QMainWindow):
         button = QPushButton("Click Me", self)
         # button.move(50,50)
         button.setGeometry(QRect(100, 100,  112, 50))
-        # button.setIcon(QtGui.QIcon("assets/home.png"))
-        # button.setIconSize(QtCore.QSize(40,40))
+        button.setIcon(QtGui.QIcon("assets/home.png"))
+        button.setIconSize(QtCore.QSize(40,40))
+        button.setToolTip("<h2> This is click me hover button </h2>")
         
 
 if __name__=="__main__":
