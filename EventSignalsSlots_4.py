@@ -21,10 +21,7 @@ class Window(QMainWindow):
         self.setWindowIcon(QtGui.QIcon(iconName))
         self.setGeometry(left, top, width, height )
        
-        self.CreateButton() 
-       
-        
-        
+        self.CreateButton()   
         self.show() 
     
     def  CreateButton(self):
@@ -38,8 +35,8 @@ class Window(QMainWindow):
         # After clicking the button cloasing the window or other event is Slots/ Action
       
     def ClickMe(self):
-        print("Hello world!")
-    
+        # print("Hello world!")
+        sys.exit()    
         
     
        
