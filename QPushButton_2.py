@@ -21,6 +21,7 @@ class Window(QMainWindow):
     
     def  UiComponents(self):
         button = QPushButton("Click Me", self)
+        button.move(50,50)
         
 
 if __name__=="__main__":
