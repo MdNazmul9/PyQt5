@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui
 
 class Window(QMainWindow):
     def __init__(self):
-        super().__init__()
+        super().__init__() # important
         
         title = "PyQt5 Push Button"
         left = 500
@@ -16,7 +16,11 @@ class Window(QMainWindow):
         self.setWindowTitle(title)
         self.setWindowIcon(QtGui.QIcon(iconName))
         self.setGeometry(left, top, width, height )
-        self.show()
+        self.UiComponents()
+        self.show() # important 
+    
+    def  UiComponents(self):
+        button = QPushButton("Click Me", self)
         
 
 if __name__=="__main__":
