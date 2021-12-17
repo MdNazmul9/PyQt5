@@ -2,6 +2,8 @@ from PyQt5.QtWidgets import QApplication, QPushButton ,QMainWindow
 import sys
 from PyQt5 import QtCore, QtGui
 
+from PyQt5.QtCore import QRect
+
 class Window(QMainWindow):
     def __init__(self):
         super().__init__() # important
@@ -21,7 +23,8 @@ class Window(QMainWindow):
     
     def  UiComponents(self):
         button = QPushButton("Click Me", self)
-        button.move(50,50)
+        # button.move(50,50)
+        button.setGeometry(QRect(100, 100,  112, 28))
         
 
 if __name__=="__main__":
