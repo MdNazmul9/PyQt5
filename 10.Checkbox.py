@@ -22,7 +22,7 @@ class Window(QDialog):
         self.setWindowTitle(self.title)
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
-    
+
         self.show()
         
 if __name__=="__main__":
@@ -30,6 +30,3 @@ if __name__=="__main__":
     window = Window()
     sys.exit(App.exec())
     
-
-        
-   
