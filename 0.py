@@ -8,12 +8,12 @@ class Window(QDialog):
     def __init__(self):
         super().__init__()
         
-        self.title = "Label" 
+        self.title = "PyQt5" 
      
-        self.left = 200
-        self.top = 100
-        self.width = 600
-        self.height = 300
+        self.left = 300
+        self.top = 400
+        self.width = 400
+        self.height = 100
         self.iconName = "assets/home.png"
         
         self.InitWindow()
