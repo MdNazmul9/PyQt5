@@ -8,8 +8,7 @@ class Window(QDialog):
     def __init__(self):
         super().__init__()
         
-        self.title = "Label" 
-     
+        self.title = "pyQT5" 
         self.left = 200
         self.top = 100
         self.width = 600
@@ -22,17 +21,6 @@ class Window(QDialog):
         self.setWindowTitle(self.title)
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
-        
-        vbox = QVBoxLayout()
-        label = QLabel(self)
-        pixmap = QPixmap("assets/py.png")
-        label.setPixmap(pixmap)
-        vbox.addWidget(label)
-        
-        
-        
-        self.setLayout(vbox)
-        
         self.show()
         
 if __name__=="__main__":
