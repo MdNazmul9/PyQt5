@@ -10,13 +10,11 @@ class Window(QWidget):
         
         self.title = "PyQt5 QButtonGroup" 
      
-        self.left = 300
-        self.top = 400
-        self.width = 400
-        self.height = 100
+        self.left = 500
+        self.top = 200
+        self.width = 300
+        self.height = 250
         self.iconName = "assets/home.png"
-        
-        
         
         self.InitWindow()
         
@@ -25,27 +23,7 @@ class Window(QWidget):
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
         
-        hbox = QHBoxLayout()
-                
-        groupbox = QGroupBox("Select your favorite fruit")
-        groupbox.setFont(QtGui.QFont("Sanserif", 15))
         
-        hbox.addWidget(groupbox)
-        
-        vbox = QVBoxLayout()
-        
-        rad1 = QRadioButton("Apple")
-        vbox.addWidget(rad1)
-        
-        rad2 = QRadioButton("Banana")
-        vbox.addWidget(rad2)
-        
-        rad3 = QRadioButton("Melon")
-        vbox.addWidget(rad3)
-        
-        groupbox.setLayout(vbox)
-        
-        self.setLayout(hbox)
         self.show()
         
     
