@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QPushButton, QRadioButton, QSizeGrip, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QButtonGroup, QGroupBox
+from PyQt5.QtWidgets import QApplication, QFrame, QPushButton, QRadioButton, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QButtonGroup, QGroupBox
 import sys
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtCore import QRect
@@ -22,17 +22,28 @@ class Window(QWidget):
         self.setWindowTitle(self.title)
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setStyleSheet('background-color:yellow')
         
-        flags = QtCore.Qt.WindowFlags(QtCore.Qt.FramelessWindowHint|QtCore.Qt.WindowStaysOnTopHint)
-        self.setWindowFlags(flags)
+        hbox = QHBoxLayout()
         
-        vbox = QVBoxLayout()
-        sizegrip = QSizeGrip(self)
-        vbox.addWidget(sizegrip)
-        self.setLayout(vbox)
+        btn = QPushButton("click me")
+        btn.setStyleSheet('color:white')
+        btn.setStyleSheet('background-color:green')
         
+        
+        frame = QFrame()
+        frame.setFrameShape(QFrame.StyledPanel)
+        frame.setStyleSheet("background-color:red")
+        frame.setLineWidth(0.6)
+        hbox.addWidget(frame)
+        
+        hbox.addWidget(btn)
+        
+        
+        self.setLayout(hbox)
         self.show()
         
+    
 if __name__=="__main__":
     App = QApplication(sys.argv)
     window = Window()
