@@ -19,6 +19,8 @@ class Window(QWidget):
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
         
+        self.setStyleSheet('background-color:green')
+        
         hbox = QHBoxLayout()
         
         self.slider = QSlider()
