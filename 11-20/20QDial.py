@@ -23,13 +23,29 @@ class Window(QWidget):
         self.setWindowIcon(QtGui.QIcon(self.iconName))
         self.setGeometry(self.left, self.top, self.width, self.height)
         vbx = QVBoxLayout()
+        
+        
+        self.lbl = QLabel(self)
+        self.lbl.setFont(QtGui.QFont("Sanserif", 15))
+        vbx.addWidget(self.lbl)
+        
+        
         self.dial = QDial()
+        self.dial.setMinimum(0)
+        self.dial.setMaximum(100)
+        self.dial.setValue(30)
+        self.dial.valueChanged.connect(self.dialChanged)
+        
         
         
         vbx.addWidget(self.dial)
         self.setLayout(vbx)
+        # self.setLayout(self.lbl)
         self.show()
         
+    def dialChanged(self):
+        getValue = self.dial.value()
+        self.lbl.setText("Dial changed value"+str(getValue))
     
 if __name__=="__main__":
     App = QApplication(sys.argv)
